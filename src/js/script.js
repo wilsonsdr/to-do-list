@@ -43,6 +43,7 @@ const createElements = () => {
   button.appendChild(label);
 
   button = document.createElement('button');
+  button.addEventListener('click', clearTask);
   li.appendChild(button);
 
   const i = document.createElement('i');
@@ -102,3 +103,11 @@ const clearAllTasks = () => {
     item.remove();
   });
 };
+
+// metodo para remover tarefa
+const clearTask = (e) => {
+  const button = e.currentTarget;
+  const li = button.closest('li');
+  li.remove();
+};
+
