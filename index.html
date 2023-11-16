@@ -11,7 +11,7 @@
   <body>
     <main class="flex items-center justify-center h-screen gap-10 bg-gradient-to-l from-bg-primary to-bg-secondary">
       <section class="flex flex-col gap-4 bg-neutral-color p-6 rounded-md shadow-md w-4/12">
-        <input name="user-input" class="border-2 border-gray-300 focus:border-bg-secondary outline-none py-2 px-4 rounded-md w-full transition-all duration-300 ease-in-out" type="text" placeholder="Digite sua tarefa + Enter" />
+        <input id="user-input" name="user-input" class="border-2 border-gray-300 focus:border-bg-secondary outline-none py-2 px-4 rounded-md w-full transition-all duration-300 ease-in-out" type="text" placeholder="Digite sua tarefa + Enter" />
         <nav class="flex items-center justify-between">
           <div class="flex items-center gap-4">
             <button onclick="showAllTasks()" class="hover:text-bg-primary">Todas</button>
@@ -20,11 +20,11 @@
           </div>
           <button class="py-1 px-4 inline-block rounded-md text-neutral-color bg-btn-color hover:bg-btn-hover">Limpar</button>
         </nav>
-        <ul class="flex flex-col gap-4 max-h-48 overflow-y-scroll">
-          <li class="flex items-center justify-between list">
+        <ul class="flex flex-col gap-4 max-h-48 overflow-y-scroll relative">
+          <li class="flex items-center justify-between">
             <button onclick="checkTask(event)" class="flex items-center gap-3">
-              <input class="w-4 h-4 checkbox" type="checkbox" />
-              <label class="task">Fazer compras</label>
+              <input class="w-4 h-4 cursor-pointer checkbox" type="checkbox" />
+              <label class="cursor-pointer name-task">Fazer compras</label>
             </button>
             <button>
               <i class="fa-solid fa-xmark w-4 h-4 text-btn-color"></i>

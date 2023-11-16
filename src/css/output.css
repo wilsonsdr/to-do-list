@@ -864,6 +864,10 @@ video {
   transform: none;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .touch-auto{
   touch-action: auto;
 }
@@ -2465,6 +2469,37 @@ body {
   }
 }
 
+.after\:absolute::after{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:top-0::after{
+  content: var(--tw-content);
+  top: 0px;
+}
+
+.after\:h-3::after{
+  content: var(--tw-content);
+  height: 0.75rem;
+}
+
+.after\:h-\[1px\]::after{
+  content: var(--tw-content);
+  height: 1px;
+}
+
+.after\:w-full::after{
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.after\:bg-black::after{
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-btn-hover:hover{
   background-color: var(--btn-hover);
 }
@@ -2512,3 +2547,4 @@ body {
     }
   }
 }
+
