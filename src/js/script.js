@@ -79,3 +79,18 @@ const showPendingTasks = () => {
     }
   });
 };
+
+// metodo para mostrar todas tarefas
+const showAllTasks = () => {
+  const lis = document.querySelectorAll('li');
+
+  lis.forEach((item) => {
+    const task = item.querySelector('.task-name');
+    if (task.classList.contains('line-through')) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.remove('hidden');
+    }
+  });
+};
+
