@@ -9,13 +9,28 @@ const checkTask = (e) => {
 
 // metodo para adicionar tarefa
 const addTask = (e) => {
-  if (e.key === 'Enter' && isNaN(userInput.value) && userInput.value.length > 2) {
+  if (e.key === 'Enter' && isNaN(userInput.value) && userInput.value.length > 2 && !checkExistingTasks()) {
     createElements();
   }
 };
 
 const userInput = document.getElementById('user-input');
 userInput.addEventListener('keyup', addTask);
+
+// metodo para verificar tarefa existentes
+const checkExistingTasks = () => {
+  const task = document.querySelectorAll('.task-name');
+  let taskExists = false;
+
+  for (let value of task) {
+    if (value.textContent === userInput.value) {
+      taskExists = true;
+      break;
+    }
+  }
+
+  return taskExists;
+};
 
 // metodo para criar elementos
 const createElements = () => {

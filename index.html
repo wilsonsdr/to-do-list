@@ -9,21 +9,22 @@
   </head>
 
   <body>
-    <main class="flex items-center justify-center h-screen gap-10 bg-gradient-to-l from-bg-primary to-bg-secondary">
-      <section class="flex flex-col gap-4 bg-neutral-color p-6 rounded-md shadow-md w-4/12">
+    <main class="flex items-center justify-center h-screen gap-10 bg-gradient-to-l from-bg-primary to-bg-secondary max-lg:flex-col">
+      <h1 class="text-4xl text-neutral-color hidden max-lg:flex">To-do List</h1>
+      <section class="flex flex-col gap-4 bg-neutral-color p-6 rounded-md shadow-md w-5/12 max-lg:w-11/12">
         <input id="user-input" name="user-input" class="border-2 border-gray-300 focus:border-bg-secondary outline-none py-2 px-4 rounded-md w-full transition-all duration-300 ease-in-out" type="text" placeholder="Digite sua tarefa + Enter" />
         <nav class="flex items-center justify-between">
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3 max-lg:text-sm">
             <button onclick="showAllTasks()" class="hover:text-bg-primary">Todas</button>
             <button onclick="showPendingTasks()" class="hover:text-bg-primary">Pendentes</button>
             <button onclick="showDoneTasks()" class="hover:text-bg-primary">Realizadas</button>
           </div>
-          <button onclick="clearAllTasks()" class="py-1 px-4 inline-block rounded-md text-neutral-color bg-btn-color hover:bg-btn-hover">Limpar</button>
+          <button onclick="clearAllTasks()" class="py-1 px-2 inline-block rounded-md text-neutral-color bg-btn-color hover:bg-btn-hover">Limpar</button>
         </nav>
         <ul class="flex flex-col gap-4 max-h-48 overflow-y-scroll">
         </ul>
       </section>
-      <section class="flex flex-col gap-2 w-4/12 text-neutral-color">
+      <section class="flex flex-col gap-2 w-4/12 text-neutral-color max-lg:hidden">
         <h1 class="text-4xl">To-do List</h1>
         <p class="text-base">Gerencie suas tarefas de forma eficiente com o To-do List. Utilizando JavaScript para adicionar, remover e completar tarefas. Os dados são armazenados localmente no seu navegador usando o Local Storage.</p>
       </section>
