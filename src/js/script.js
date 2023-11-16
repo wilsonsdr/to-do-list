@@ -2,7 +2,7 @@
 const checkTask = (e) => {
   const button = e.currentTarget;
   const checkbox = button.querySelector('.checkbox');
-  const task = button.querySelector('.name-task');
+  const task = button.querySelector('.task-name');
   task.classList.toggle('line-through');
   task.classList.contains('line-through') ? (checkbox.checked = true) : (checkbox.checked = false);
 };
@@ -36,7 +36,7 @@ const createElements = () => {
   input.type = 'checkbox';
 
   const label = document.createElement('label');
-  label.classList.add('cursor-pointer', 'name-task');
+  label.classList.add('cursor-pointer', 'task-name');
   label.textContent = userInput.value;
 
   button.appendChild(input);
@@ -50,4 +50,18 @@ const createElements = () => {
   button.appendChild(i);
 
   userInput.value = '';
+};
+
+// metodo para mostrar tarefas realizadas
+const showDoneTasks = () => {
+  const lis = document.querySelectorAll('li');
+
+  lis.forEach((item) => {
+    const task = item.querySelector('.task-name');
+    if (!task.classList.contains('line-through')) {
+      item.classList.add('hidden');
+    } else {
+      item.classList.remove('hidden');
+    }
+  });
 };
