@@ -9,7 +9,7 @@ const checkTask = (e) => {
 
 // metodo para adicionar tarefa
 const addTask = (e) => {
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && isNaN(userInput.value) && userInput.value.length > 2) {
     createElements();
   }
 };
@@ -102,6 +102,8 @@ const clearAllTasks = () => {
   lis.forEach((item) => {
     item.remove();
   });
+
+  userInput.value = '';
 };
 
 // metodo para remover tarefa
@@ -110,4 +112,3 @@ const clearTask = (e) => {
   const li = button.closest('li');
   li.remove();
 };
-
