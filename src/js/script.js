@@ -94,3 +94,11 @@ const showAllTasks = () => {
   });
 };
 
+// metodo para remover todas tarefas
+const clearAllTasks = () => {
+  const lis = document.querySelectorAll('li');
+
+  lis.forEach((item) => {
+    item.remove();
+  });
+};
