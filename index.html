@@ -5,20 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
     <link href="./src/css/output.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/04738758ea.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <main class="flex items-center justify-center h-screen gap-10 bg-gradient-to-l from-bg-primary to-bg-secondary">
-      <section class="bg-neutral-color p-6 rounded-md shadow-md w-4/12">
+      <section class="flex flex-col gap-4 bg-neutral-color p-6 rounded-md shadow-md w-4/12">
         <input name="user-input" class="border-2 border-gray-300 focus:border-bg-secondary outline-none py-2 px-4 rounded-md w-full transition-all duration-300 ease-in-out" type="text" placeholder="Digite sua tarefa + Enter" />
-        <nav class="flex items-center justify-between mt-4">
+        <nav class="flex items-center justify-between">
           <div class="flex items-center gap-4">
-            <button class="hover:text-bg-primary">Todas</button>
-            <button class="hover:text-bg-primary">Pendentes</button>
-            <button class="hover:text-bg-primary">Realizadas</button>
+            <button onclick="showAllTasks()" class="hover:text-bg-primary">Todas</button>
+            <button onclick="showPendingTasks()" class="hover:text-bg-primary">Pendentes</button>
+            <button onclick="showDoneTasks()" class="hover:text-bg-primary">Realizadas</button>
           </div>
           <button class="py-1 px-4 inline-block rounded-md text-neutral-color bg-btn-color hover:bg-btn-hover">Limpar</button>
         </nav>
+        <ul class="flex flex-col gap-4 max-h-48 overflow-y-scroll">
+          <li class="flex items-center justify-between list">
+            <button onclick="checkTask(event)" class="flex items-center gap-3">
+              <input class="w-4 h-4 checkbox" type="checkbox" />
+              <label class="task">Fazer compras</label>
+            </button>
+            <button>
+              <i class="fa-solid fa-xmark w-4 h-4 text-btn-color"></i>
+            </button>
+          </li>
+        </ul>
       </section>
       <section class="flex flex-col gap-2 w-4/12 text-neutral-color">
         <h1 class="text-4xl">To-do List</h1>
