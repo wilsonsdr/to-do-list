@@ -65,3 +65,17 @@ const showDoneTasks = () => {
     }
   });
 };
+
+// metodo para mostrar tarefas pendentes
+const showPendingTasks = () => {
+  const lis = document.querySelectorAll('li');
+
+  lis.forEach((item) => {
+    const task = item.querySelector('.task-name');
+    if (task.classList.contains('line-through')) {
+      item.classList.add('hidden');
+    } else {
+      item.classList.remove('hidden');
+    }
+  });
+};
