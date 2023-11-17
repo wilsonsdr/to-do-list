@@ -14,9 +14,9 @@ Marcando como Concluída: Clique na caixa de seleção à esquerda de uma tarefa
 
 Filtrando Tarefas: Utilize os botões "Todos", "Pendentes" e "Realizadas" para filtrar as tarefas de acordo com seu status.
 
-### Como Executar
+### Como acessar o projeto
 
-Basta abrir o arquivo index.html em seu navegador. A aplicação é executada localmente no seu navegador, sem a necessidade de instalação adicional
+Você pode acessar clicando nesse [link](https://wilsonsdr.github.io/to-do-list/)
 
 ### Tecnologias Utilizadas
 
