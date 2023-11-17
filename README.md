@@ -2,7 +2,7 @@
 
 O To-do List é uma aplicação simples que permite gerenciar suas tarefas de forma eficiente. Utilizando JavaScript para adicionar, remover e completar tarefas, este projeto oferece uma experiência prática para o gerenciamento diário de suas responsabilidades
 
-### Como Utilizar
+### Como utilizar
 
 Adicionando Tarefas: Insira uma tarefa na caixa de texto e pressione "Enter" para adicioná-la à lista
 
@@ -18,13 +18,13 @@ Filtrando Tarefas: Utilize os botões "Todos", "Pendentes" e "Realizadas" para f
 
 Você pode acessar clicando nesse [link](https://wilsonsdr.github.io/to-do-list/)
 
-### Tecnologias Utilizadas
+### Tecnologias utilizadas
 
 - HTML
 - TailwindCSS
 - JavaScript
 
-### Aprendizados Adquiridos
+### Aprendizados adquiridos
 
 Ao desenvolver este projeto, tive a oportunidade de aprimorar minhas habilidades em JavaScript, especialmente no uso do Local Storage para armazenar os dados localmente no navegador. Além disso, ganhei experiência em manipulação de DOM (Document Object Model) para interação com o usuário
 
